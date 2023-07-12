@@ -78,14 +78,14 @@ const Note = ({note}) => {
                 <input 
                  value={noteToEdit.title || ""}
                  onChange={handleChange}
-                className="bg-neutral-900 p-4 w-full" type="text" id="title"  />
+                className="p-4 w-full" type="text" id="title"  />
               </div>
               <div>
                 <input 
                   value={noteToEdit.description || ""}
                   onChange={handleChange}
                   name="description"
-                className="bg-neutral-900 p-4 w-full mt-3" type="text" id="description"  />
+                className="p-4 w-full mt-3" type="text" id="description"  />
               </div>
               <button type="submit" className="mr-3 bg-lime-700 mt-2 p-2 rounded-md">Update</button>
               <button onClick={() => setVisibility(visibility => !visibility)} className="mr-3 bg-rose-600 mt-2 p-2 rounded-md">Cancel</button>
