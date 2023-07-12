@@ -61,12 +61,12 @@ const Note = ({note}) => {
   </div>
       <div className="pt-5">
         <button
-          className="mr-3 p-3 btn btn-sm mb-3 bg-success ml-3 rounded-md text-center"
+          className="mr-3 btn btn-sm bg-success ml-3 rounded-md text-center"
           onClick={(e)=>editForm()}
         >
           Edit
         </button>
-        <button onClick={() => handleDeleteNote(note.id)} className="mr-3 text-white p-3 btn btn-sm mb-3 bg-red-600 rounded-md">Delete</button>
+        <button onClick={() => handleDeleteNote(note.id)} className="mr-3 text-white btn btn-sm mb-3 bg-red-600 rounded-md text-center">Delete</button>
         
      
         {visibility && <div>
