@@ -18,7 +18,6 @@ const Home = async () => {
 
   return (
     <main>
-      <h2>Notes App</h2>
       <AddNote />
       <section>
         <NoteList notes={notes}  />
