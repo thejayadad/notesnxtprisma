@@ -54,18 +54,20 @@ const Note = ({note}) => {
 
   return (
     <div>
-          <li className="p-3 my-5 bg-slate-200" key={note.id}>
-      <h1 className="text-2xl font-bold">{note.title}</h1>
-      <p>{note.description}</p>
-
+          <li className="card w-80 bg-primary text-primary-content" key={note.id}>
+          <div className="card-body">
+    <h2 className="card-title">{note.title}</h2>
+    <p>{note.description}</p>
+  </div>
       <div className="pt-5">
         <button
-          className="text-blue-700 mr-3"
+          className="text-warning mr-3 p-3"
           onClick={(e)=>editForm()}
         >
           Edit
         </button>
         <button onClick={() => handleDeleteNote(note.id)} className="text-red-700 mr-3">Delete</button>
+        
      
         {visibility && <div>
             <h2 className="text-center">Update Note</h2>

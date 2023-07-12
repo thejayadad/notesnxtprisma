@@ -3,7 +3,7 @@ import Note from './Note'
 
 const NoteList = ({notes}) => {
   return (
-    <ul>
+    <ul className='flex flex-wrap gap-4 mt-8 justify-center'>
     {
         notes.map(note => (
             <Note key={note.id} note={note} />

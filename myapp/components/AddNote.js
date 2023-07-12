@@ -9,6 +9,7 @@ import {useRouter} from 'next/navigation'
 
 const AddNote = () => {
     const router = useRouter();
+    const [visibility, setVisibility] = useState(false)
 
     const [inputs, setInputs] = useState({});
 
@@ -34,15 +35,16 @@ const AddNote = () => {
       };
 
   return (
-    <section>
-          <form className="w-full" onSubmit={handleSubmit}>
-          <h1 className="text-2xl pb-3">Add New Post</h1>
+    <section className=""> 
+     
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+          <h1 className="text-2xl pb-3 text-center">Add New Note</h1>
 
           <input
             type="text"
             placeholder="Title"
             name="title"
-            className="w-full p-2"
+            className="input input-bordered input-sm w-full max-w-md m-auto"
             value={inputs.title || ""}
             onChange={handleChange}
           />
@@ -51,12 +53,13 @@ const AddNote = () => {
             type="text"
             placeholder="Description"
             name="description"
-            className="w-full p-2 my-5"
+            className="input input-bordered input-sm w-full max-w-md m-auto "
             value={inputs.description || ""}
             onChange={handleChange}
           />
 
-          <button type="submit" className="bg-blue-700 text-white px-5 py-2">
+          <button type="submit" 
+          className="btn btn-warning max-w-md m-auto">
             Submit
           </button>
         </form>
